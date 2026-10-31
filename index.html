@@ -1,0 +1,641 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Futuristic portfolio of Neev Bharat, a B.Tech student in CSE (AI & ML) at DRK Institute of Science and Technology.">
+  <meta name="theme-color" content="#08090d">
+  <title>Neev Bharat | Futuristic Portfolio</title>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%2308090d'/><path d='M25 75 L25 25 L45 55 L45 25' stroke='%23ff2a5f' stroke-width='8' fill='none' stroke-linecap='round' stroke-linejoin='round'/><path d='M55 25 L75 25 C82 25 85 30 85 38 C85 45 80 48 73 49 C82 50 86 55 86 63 C86 71 80 75 73 75 L55 75 Z' stroke='%23ff2a5f' stroke-width='8' fill='none' stroke-linecap='round' stroke-linejoin='round'/></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;600;700;800;900&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Futuristic Initializing Preloader -->
+  <div class="loader" id="loader">
+    <div class="loader-visual">
+      <div class="loader-ring"></div>
+      <div class="loader-core"></div>
+    </div>
+    <div class="loader-text-group">
+      <span class="loader-title">INITIALIZING NEEV_OS...</span>
+      <div class="loader-track">
+        <div class="loader-progress" id="loaderBar"></div>
+      </div>
+      <span class="loader-status" id="loaderStatus">CONNECTING QUANTUM CORE [0%]</span>
+    </div>
+  </div>
+
+  <!-- Background Ambience & Canvas -->
+  <canvas id="particles"></canvas>
+  <div class="grid-overlay"></div>
+  <div class="radial-glow"></div>
+  <div class="noise"></div>
+
+  <!-- Custom Sci-Fi Cursor Follower (Pointer devices) -->
+  <div class="cursor-glow" id="cursorGlow"></div>
+  <div class="cursor-dot" id="cursorDot"></div>
+
+  <!-- Header Navigation -->
+  <header class="navbar" id="navbar">
+    <a class="brand" href="#home">
+      <span class="brand-mark">NB</span>
+      <span class="brand-name">NEEV<span>BHARAT</span></span>
+    </a>
+    
+    <div class="nav-controls">
+      <button class="sound-toggle" id="soundToggle" aria-label="Toggle UI Audio Synth" title="Toggle audio feedback">
+        <span class="sound-icon">🔊</span>
+        <span class="sound-label">SFX <b id="soundState">ON</b></span>
+      </button>
+      <button class="menu-toggle" id="menuToggle" aria-label="Open navigation" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+
+    <nav class="nav-links" id="navLinks">
+      <a class="active" href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#education">Education</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#interests">Interests</a>
+      <a href="#certificates">Certificates</a>
+      <a href="#questions">Questions</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <!-- HERO SECTION -->
+    <section class="hero section" id="home">
+      <div class="hero-copy reveal">
+        <p class="eyebrow"><span class="pulse"></span> STUDENT DEVELOPER // ONLINE</p>
+        <h1>NEEV<br><span>BHARAT</span></h1>
+        <div class="hero-line"></div>
+        <h2>CSE (AI & ML) <b>|</b> Beginner Coder <b>|</b> Future Software Engineer</h2>
+        <p class="hero-text">I'm a first-year B.Tech student at DRK Institute of Science and Technology, learning coding, exploring machine learning, and building my skills one project at a time.</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#projects">EXPLORE MY WORK <span>↗</span></a>
+          <a class="btn btn-ghost" href="assets/resume/resume.pdf" download="Neev_Bharat_Resume.pdf">DOWNLOAD RESUME <span>↓</span></a>
+        </div>
+        <div class="social-row">
+          <a href="#contact" class="social-badge" data-tip="GitHub Coming Soon" aria-label="GitHub coming soon">GH</a>
+          <a href="#contact" class="social-badge" data-tip="LinkedIn Coming Soon" aria-label="LinkedIn coming soon">IN</a>
+          <a href="mailto:neevbharat08@gmail.com" class="social-badge" data-tip="Send Email" aria-label="Email Neev Bharat">✉</a>
+        </div>
+      </div>
+
+      <div class="hero-visual reveal delay-1">
+        <div class="orbit-container">
+          <div class="orbit orbit-one"></div>
+          <div class="orbit orbit-two"></div>
+          <div class="orbit orbit-three"></div>
+          <div class="tech-ring"></div>
+          <div class="core">
+            <div class="core-grid"></div>
+            <div class="core-pulse"></div>
+            <span>NB</span>
+          </div>
+          <div class="floating-tag tag-one">CODE</div>
+          <div class="floating-tag tag-two">LEARN</div>
+          <div class="floating-tag tag-three">BUILD</div>
+        </div>
+        <div class="visual-label">PROFILE // 01<br><small>ACTIVE STATUS</small></div>
+      </div>
+    </section>
+
+    <!-- ABOUT SECTION -->
+    <section class="section" id="about">
+      <div class="section-heading reveal">
+        <p class="eyebrow">01 // PROFILE</p>
+        <h2>ABOUT <span>ME</span></h2>
+        <p>A simple introduction to who I am and where I'm heading.</p>
+      </div>
+      <div class="about-grid">
+        <article class="glass-card about-card reveal">
+          <span class="card-number">01</span>
+          <h3>WHO I AM</h3>
+          <p>I'm Neev Bharat, an 18-year-old first-semester B.Tech student at DRK Institute of Science and Technology, pursuing Computer Science (AI & ML).</p>
+          <p>I'm at the beginning of my coding journey and enjoy learning new technologies, experimenting with projects, and exploring machine learning.</p>
+          <p>Outside technology, I enjoy cricket and mobile games.</p>
+          <div class="card-glow-bar"></div>
+        </article>
+
+        <div class="profile-facts reveal delay-1">
+          <div class="fact-card">
+            <span>BRANCH</span>
+            <strong>CSE (AI & ML)</strong>
+          </div>
+          <div class="fact-card">
+            <span>CERTIFICATE</span>
+            <strong>AI & Machine Learning — Alison Online Learning</strong>
+          </div>
+          <div class="fact-card">
+            <span>STRENGTHS</span>
+            <strong>Friendly • Confident English • Cricket • Teamwork • Problem Solving</strong>
+          </div>
+          <div class="fact-card">
+            <span>ABOUT ME</span>
+            <strong>Friendly • Confident • Curious</strong>
+          </div>
+        </div>
+
+        <div class="stats-grid reveal delay-1">
+          <div class="stat-card">
+            <strong>01</strong>
+            <span>Education</span>
+            <b>B.TECH</b>
+          </div>
+          <div class="stat-card">
+            <strong>02</strong>
+            <span>Current Year</span>
+            <b>1ST</b>
+          </div>
+          <div class="stat-card">
+            <strong>03</strong>
+            <span>Level</span>
+            <b>BEGINNER</b>
+          </div>
+          <div class="stat-card">
+            <strong>04</strong>
+            <span>Goal</span>
+            <b>SOFTWARE</b>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- EDUCATION SECTION -->
+    <section class="section" id="education">
+      <div class="section-heading reveal">
+        <p class="eyebrow">02 // ACADEMICS</p>
+        <h2>EDUCATION <span>TIMELINE</span></h2>
+        <p>My academic journey so far.</p>
+      </div>
+      <div class="timeline">
+        <article class="timeline-item reveal">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card glass-card">
+            <span class="timeline-year">CURRENT // 2026</span>
+            <h3>B.Tech — 1st Year</h3>
+            <h4>DRK Institute of Science and Technology</h4>
+            <p>Building engineering fundamentals while learning C, C++, HTML and exploring Artificial Intelligence & Machine Learning.</p>
+            <div class="timeline-tags">
+              <span>B.Tech CSE</span>
+              <span>AI & ML Specialization</span>
+              <span>Hyderabad</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="timeline-item reveal">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card glass-card">
+            <span class="timeline-year">INTERMEDIATE // COMPLETED</span>
+            <h3>Intermediate Education</h3>
+            <h4>SR Junior College</h4>
+            <p>MPC Stream (Mathematics, Physics, Chemistry) — Scored <strong>893 marks</strong>.</p>
+            <div class="timeline-tags">
+              <span>MPC</span>
+              <span>893 / 1000 Marks</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="timeline-item muted reveal">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card glass-card">
+            <span class="timeline-year">SECONDARY // COMPLETED</span>
+            <h3>School Education</h3>
+            <h4>Springs High School</h4>
+            <p>Completed secondary school education with strong academic focus — Achieved <strong>83%</strong>.</p>
+            <div class="timeline-tags">
+              <span>Secondary School</span>
+              <span>83%</span>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- SKILLS SECTION -->
+    <section class="section" id="skills">
+      <div class="section-heading reveal">
+        <p class="eyebrow">03 // LEARNING LAB</p>
+        <h2>MY <span>SKILLS</span></h2>
+        <p>Skills I'm learning and developing—not exaggerated expertise.</p>
+      </div>
+      <div class="skills-grid">
+        <article class="skill-card reveal">
+          <div class="skill-head">
+            <div class="skill-icon">&lt;/&gt;</div>
+            <div class="skill-percent">65%</div>
+          </div>
+          <h3>HTML</h3>
+          <p>Web structure & semantics</p>
+          <div class="bar"><i style="--level: 65%"></i></div>
+        </article>
+
+        <article class="skill-card reveal">
+          <div class="skill-head">
+            <div class="skill-icon">#</div>
+            <div class="skill-percent">55%</div>
+          </div>
+          <h3>CSS</h3>
+          <p>Web styling & layouts</p>
+          <div class="bar"><i style="--level: 55%"></i></div>
+        </article>
+
+        <article class="skill-card reveal">
+          <div class="skill-head">
+            <div class="skill-icon">JS</div>
+            <div class="skill-percent">40%</div>
+          </div>
+          <h3>JavaScript</h3>
+          <p>Learning interactive basics</p>
+          <div class="bar"><i style="--level: 40%"></i></div>
+        </article>
+
+        <article class="skill-card reveal">
+          <div class="skill-head">
+            <div class="skill-icon">Py</div>
+            <div class="skill-percent">50%</div>
+          </div>
+          <h3>Python</h3>
+          <p>Programming & logic building</p>
+          <div class="bar"><i style="--level: 50%"></i></div>
+        </article>
+
+        <article class="skill-card reveal">
+          <div class="skill-head">
+            <div class="skill-icon">ML</div>
+            <div class="skill-percent">35%</div>
+          </div>
+          <h3>Machine Learning</h3>
+          <p>Course & algorithms exploration</p>
+          <div class="bar"><i style="--level: 35%"></i></div>
+        </article>
+
+        <article class="skill-card reveal">
+          <div class="skill-head">
+            <div class="skill-icon">GH</div>
+            <div class="skill-percent">35%</div>
+          </div>
+          <h3>GitHub</h3>
+          <p>Learning version control</p>
+          <div class="bar"><i style="--level: 35%"></i></div>
+        </article>
+
+        <article class="skill-card reveal">
+          <div class="skill-head">
+            <div class="skill-icon">PS</div>
+            <div class="skill-percent">55%</div>
+          </div>
+          <h3>Problem Solving</h3>
+          <p>Growing logical thinking</p>
+          <div class="bar"><i style="--level: 55%"></i></div>
+        </article>
+
+        <article class="skill-card reveal">
+          <div class="skill-head">
+            <div class="skill-icon">∞</div>
+            <div class="skill-percent">85%</div>
+          </div>
+          <h3>Curiosity</h3>
+          <p>Always hungry to learn</p>
+          <div class="bar"><i style="--level: 85%"></i></div>
+        </article>
+      </div>
+    </section>
+
+    <!-- PROJECTS SECTION -->
+    <section class="section" id="projects">
+      <div class="section-heading reveal">
+        <p class="eyebrow">04 // BUILD LOG</p>
+        <h2>MY <span>PROJECTS</span></h2>
+        <p>Projects I have built or will build as I learn.</p>
+      </div>
+      <div class="projects-grid">
+        <article class="project-card featured reveal">
+          <div class="project-number">PROJECT // 01</div>
+          <div class="project-visual">
+            <div class="project-art-bg">
+              <span class="project-logo">NB</span>
+              <div class="cyber-radar"></div>
+            </div>
+            <div class="scan"></div>
+          </div>
+          <div class="project-content">
+            <p class="project-status"><span class="status-live"></span> CURRENT PROJECT</p>
+            <h3>Futuristic Portfolio</h3>
+            <p>A responsive futuristic cyber portfolio created to showcase my education, skills, interests and learning journey with interactive particle simulation and modern glassmorphism UI.</p>
+            <div class="tech-list">
+              <span>HTML5</span>
+              <span>CSS3</span>
+              <span>JAVASCRIPT</span>
+              <span>CANVAS</span>
+            </div>
+            <div class="project-links">
+              <a href="#home" class="btn-project">Live Demo ↗</a>
+              <a href="#contact" class="btn-project" onclick="window.showToast && window.showToast('GitHub repo link will be updated soon!'); return false;">GitHub ↗</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="project-card reveal">
+          <div class="project-number">PROJECT // 02</div>
+          <div class="project-visual placeholder">
+            <div class="code-symbol-preview">&lt;AI / ML&gt;</div>
+            <span>02</span>
+            <div class="scan"></div>
+          </div>
+          <div class="project-content">
+            <p class="project-status"><span class="status-queue"></span> COMING SOON</p>
+            <h3>ML Beginner Project</h3>
+            <p>A future machine-learning project where I will apply what I learn through my AI & ML studies (data analysis, prediction models, and Python libraries).</p>
+            <div class="tech-list">
+              <span>PYTHON</span>
+              <span>MACHINE LEARNING</span>
+              <span>SCIKIT-LEARN</span>
+            </div>
+            <div class="project-links">
+              <a href="#contact" class="btn-project" onclick="window.showToast && window.showToast('Project currently in development pipeline.'); return false;">GitHub ↗</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="project-card reveal">
+          <div class="project-number">PROJECT // 03</div>
+          <div class="project-visual placeholder">
+            <div class="code-symbol-preview">&#123; INNOVATION &#125;</div>
+            <span>03</span>
+            <div class="scan"></div>
+          </div>
+          <div class="project-content">
+            <p class="project-status"><span class="status-plan"></span> FUTURE BUILD</p>
+            <h3>Next Idea</h3>
+            <p>A placeholder for the next project I create during my B.Tech journey. My goal is to build practical software that solves real problems for people.</p>
+            <div class="tech-list">
+              <span>WEB APP</span>
+              <span>FULL STACK</span>
+              <span>COMING SOON</span>
+            </div>
+            <div class="project-links">
+              <a href="#contact" class="btn-project" onclick="window.showToast && window.showToast('Concept in planning stage.'); return false;">GitHub ↗</a>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- INTERESTS SECTION -->
+    <section class="section" id="interests">
+      <div class="section-heading reveal">
+        <p class="eyebrow">05 // BEYOND CODE</p>
+        <h2>MY <span>INTERESTS</span></h2>
+        <p>The things I enjoy both inside and outside technology.</p>
+      </div>
+      <div class="interest-grid">
+        <div class="interest glass-card reveal">
+          <span class="interest-num">01</span>
+          <div class="interest-icon">◈</div>
+          <h3>Technology</h3>
+          <p>Fascinated by emerging tech, AI breakthroughs, and hardware evolution.</p>
+        </div>
+        <div class="interest glass-card reveal">
+          <span class="interest-num">02</span>
+          <div class="interest-icon">&lt;/&gt;</div>
+          <h3>Coding</h3>
+          <p>Crafting algorithms, debugging logic, and building functional applications.</p>
+        </div>
+        <div class="interest glass-card reveal">
+          <span class="interest-num">03</span>
+          <div class="interest-icon">AI</div>
+          <h3>Machine Learning</h3>
+          <p>Understanding neural networks, automation, and data-driven insights.</p>
+        </div>
+        <div class="interest glass-card reveal">
+          <span class="interest-num">04</span>
+          <div class="interest-icon">🏏</div>
+          <h3>Cricket</h3>
+          <p>Passionate cricket fan and player; big admirer of MS Dhoni's calm leadership.</p>
+        </div>
+        <div class="interest glass-card reveal">
+          <span class="interest-num">05</span>
+          <div class="interest-icon">🎮</div>
+          <h3>Mobile Games</h3>
+          <p>Strategic gaming, testing reflexes, and unwinding with multiplayer matches.</p>
+        </div>
+        <div class="interest glass-card reveal">
+          <span class="interest-num">06</span>
+          <div class="interest-icon">✦</div>
+          <h3>Learning New Skills</h3>
+          <p>Continuous personal development, communication skills, and curiosity.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- CERTIFICATES SECTION -->
+    <section class="section" id="certificates">
+      <div class="section-heading reveal">
+        <p class="eyebrow">06 // CREDENTIALS</p>
+        <h2>MY <span>CERTIFICATE</span></h2>
+        <p>Courses and credentials that support my learning journey.</p>
+      </div>
+      <div class="achievement-grid">
+        <article class="achievement glass-card reveal">
+          <div class="cert-header">
+            <span class="cert-badge">CERTIFICATE // 01</span>
+            <span class="cert-status">VERIFIED</span>
+          </div>
+          <div class="cert-body">
+            <div class="cert-icon">
+              <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="8" r="7"></circle>
+                <polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"></polyline>
+              </svg>
+            </div>
+            <div class="cert-info">
+              <h3>AI & Machine Learning</h3>
+              <h4>Alison Online Learning</h4>
+              <p>Completed foundational coursework covering artificial intelligence concepts, core ML pipelines, model principles, and modern applications as part of my CSE specialization.</p>
+            </div>
+          </div>
+          <div class="cert-footer">
+            <span>ISSUED VIA ALISON ONLINE</span>
+            <span class="cert-spec">CSE (AI & ML)</span>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- QUESTIONS SECTION (Interactive Zone) -->
+    <section class="section" id="questions">
+      <div class="section-heading reveal">
+        <p class="eyebrow">07 // INTERACTIVE ZONE</p>
+        <h2>QUESTIONS <span>ABOUT ME?</span></h2>
+        <p>Click a question to reveal a short answer.</p>
+      </div>
+      <div class="questions-grid">
+        <button class="question-card glass-card reveal" type="button" aria-expanded="false" data-answer="I'm currently pursuing my first year of B.Tech in Computer Science & Engineering (AI & ML) at DRK Institute of Science and Technology.">
+          <div class="question-header">
+            <span class="q-badge">Q01</span>
+            <h3>What are you studying?</h3>
+            <span class="toggle-sign" aria-hidden="true">+</span>
+          </div>
+          <div class="answer-wrapper">
+            <p class="answer-content"></p>
+          </div>
+        </button>
+
+        <button class="question-card glass-card reveal" type="button" aria-expanded="false" data-answer="I'm a beginner in coding and I'm actively building my fundamentals through practice, coursework, and personal projects.">
+          <div class="question-header">
+            <span class="q-badge">Q02</span>
+            <h3>How experienced are you in coding?</h3>
+            <span class="toggle-sign" aria-hidden="true">+</span>
+          </div>
+          <div class="answer-wrapper">
+            <p class="answer-content"></p>
+          </div>
+        </button>
+
+        <button class="question-card glass-card reveal" type="button" aria-expanded="false" data-answer="I'm excited about machine learning's potential to automate intelligent tasks and solve real-world problems. I'm exploring it through hands-on practice.">
+          <div class="question-header">
+            <span class="q-badge">Q03</span>
+            <h3>Why are you learning machine learning?</h3>
+            <span class="toggle-sign" aria-hidden="true">+</span>
+          </div>
+          <div class="answer-wrapper">
+            <p class="answer-content"></p>
+          </div>
+        </button>
+
+        <button class="question-card glass-card reveal" type="button" aria-expanded="false" data-answer="Cricket and mobile games are two of my favorite interests outside academics and technology. MS Dhoni is one of my favorite cricket players.">
+          <div class="question-header">
+            <span class="q-badge">Q04</span>
+            <h3>What do you do outside coding?</h3>
+            <span class="toggle-sign" aria-hidden="true">+</span>
+          </div>
+          <div class="answer-wrapper">
+            <p class="answer-content"></p>
+          </div>
+        </button>
+
+        <button class="question-card glass-card reveal" type="button" aria-expanded="false" data-answer="My goal is to become a Software Engineer and keep improving my technical skills while building useful real-world technology.">
+          <div class="question-header">
+            <span class="q-badge">Q05</span>
+            <h3>What is your future goal?</h3>
+            <span class="toggle-sign" aria-hidden="true">+</span>
+          </div>
+          <div class="answer-wrapper">
+            <p class="answer-content"></p>
+          </div>
+        </button>
+
+        <button class="question-card glass-card reveal" type="button" aria-expanded="false" data-answer="My GitHub and LinkedIn profiles are coming soon. For now, you can reach me directly through my email in the contact section below!">
+          <div class="question-header">
+            <span class="q-badge">Q06</span>
+            <h3>How can I connect with you?</h3>
+            <span class="toggle-sign" aria-hidden="true">+</span>
+          </div>
+          <div class="answer-wrapper">
+            <p class="answer-content"></p>
+          </div>
+        </button>
+      </div>
+    </section>
+
+    <!-- RESUME BANNER -->
+    <section class="resume-banner reveal">
+      <div class="banner-content">
+        <p class="eyebrow">08 // PROFILE DATA</p>
+        <h2>EXPLORE MY<br><span>JOURNEY.</span></h2>
+        <p class="banner-sub">Get an overview of my academic records, coursework, technical skills, and credentials in a portable format.</p>
+      </div>
+      <a class="btn btn-primary" href="assets/resume/resume.pdf" download="Neev_Bharat_Resume.pdf">DOWNLOAD RESUME <span>↓</span></a>
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section class="section contact-section" id="contact">
+      <div class="section-heading reveal">
+        <p class="eyebrow">09 // CONNECTION</p>
+        <h2>LET'S <span>CONNECT</span></h2>
+        <p>Have a project idea or want to talk tech?</p>
+      </div>
+      <div class="contact-grid">
+        <div class="contact-info reveal">
+          <div class="contact-line glass-card">
+            <span>EMAIL</span>
+            <strong><a href="mailto:neevbharat08@gmail.com">neevbharat08@gmail.com</a></strong>
+          </div>
+          <div class="contact-line glass-card">
+            <span>GITHUB</span>
+            <strong>GitHub — Coming Soon</strong>
+          </div>
+          <div class="contact-line glass-card">
+            <span>LINKEDIN</span>
+            <strong>LinkedIn — Coming Soon</strong>
+          </div>
+          <div class="contact-line glass-card">
+            <span>LOCATION</span>
+            <strong>Hyderabad, India</strong>
+          </div>
+          <div class="terminal-status glass-card">
+            <div class="term-header">
+              <span class="term-dot dot-red"></span>
+              <span class="term-dot dot-yellow"></span>
+              <span class="term-dot dot-green"></span>
+              <span class="term-title">COMMUNICATION_LINK</span>
+            </div>
+            <div class="term-body">
+              <p>> PORT: 8080 // SECURE TLS</p>
+              <p>> INBOX_STATUS: OPEN FOR COLLABORATION</p>
+              <p>> RESPONSE_TIME: &lt; 24 HOURS</p>
+            </div>
+          </div>
+        </div>
+
+        <form class="contact-form glass-card reveal" id="contactForm" novalidate>
+          <div class="form-group">
+            <label for="userName">NAME</label>
+            <input id="userName" name="name" type="text" placeholder="Enter your full name" required autocomplete="name">
+          </div>
+          <div class="form-group">
+            <label for="userEmail">EMAIL</label>
+            <input id="userEmail" name="email" type="email" placeholder="your.name@domain.com" required autocomplete="email">
+          </div>
+          <div class="form-group">
+            <label for="userMessage">MESSAGE</label>
+            <textarea id="userMessage" name="message" rows="5" placeholder="Write your message, project idea, or greeting..." required></textarea>
+          </div>
+          <button class="btn btn-primary" type="submit" id="submitBtn">
+            <span>SEND MESSAGE</span> <span>↗</span>
+          </button>
+          <p class="form-note" id="formNote">Ready to transmit transmission packet to Neev Bharat.</p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!-- Interactive Toast Notification -->
+  <div class="toast-container" id="toastContainer" aria-live="polite"></div>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-container">
+      <div class="footer-brand">
+        NEEV <span>BHARAT</span>
+      </div>
+      <p class="footer-copy">DESIGNED & BUILT WITH <span>RED ENERGY</span> © <span id="year">2026</span></p>
+      <a class="back-to-top" href="#home" id="backToTop" aria-label="Back to top">
+        <span>BACK TO TOP</span> ↑
+      </a>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
